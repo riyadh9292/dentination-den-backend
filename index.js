@@ -16,7 +16,7 @@ const port = process.env.PORT || 5000;
 // firebase admin
 var serviceAccount = require("./destination-den-firebase-adminsdk-n7boi-e66d7bb1f8.json");
 
-const uri = `mongodb+srv://${DB_USER}:${process.env.DB_PASS}@cluster0.cnl2h.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.cnl2h.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
